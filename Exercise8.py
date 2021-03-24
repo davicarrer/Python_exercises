@@ -13,13 +13,12 @@ Dificuldade: Principiante
 
 numero1 = float(input("Digite um número qualquer: "))
 numero2 = float(input("Digite outro número qualquer: "))
-mensagem = "O número " + str(numero1) + " é "
-if (numero1 >= numero2):
-    if(numero1 > numero2):
-        mensagem = mensagem + "maior do que o"
-    else:
-        mensagem = mensagem + "igual ao"
+if numero1 > numero2:
+    mensagem = "maior do que o"
+elif numero1 == numero2:
+    mensagem = "igual ao"
 else:
-    mensagem = mensagem + "menor do que o"
-mensagem = mensagem + " número " + str(numero2)
+    mensagem = "menor do que o"
+
+mensagem = f"O número {numero1} é {mensagem} número {numero2}"
 print(mensagem)
